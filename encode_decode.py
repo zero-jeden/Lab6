@@ -1,3 +1,4 @@
+# Elijah De Guzman
 def encode(password):
     storage_array =[]
     string =''
@@ -13,6 +14,11 @@ def encode(password):
 
     return string
 
+def decode(data):
+    out = ""
+    for char in data:
+        out += str(int(char) - 3)
+    return out
 
 if __name__ == '__main__':
 
@@ -33,6 +39,7 @@ if __name__ == '__main__':
             print('Your password has been encoded and stored!')
 
         if selection == 2:
+            encrypted = decode(encrypted)
             print(f'The encoded  password is {'partner function'}, and the original password is {encrypted}.')
 
         if selection == 3:
