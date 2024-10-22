@@ -1,4 +1,4 @@
-# Elijah De Guzman
+
 def encode(password):
     storage_array =[]
     string =''
@@ -13,7 +13,7 @@ def encode(password):
 
 
     return string
-
+# Elijah De Guzman decode function
 def decode(data):
     out = ""
     for char in data:
