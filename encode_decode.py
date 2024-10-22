@@ -17,7 +17,10 @@ def encode(password):
 def decode(data):
     out = ""
     for char in data:
-        out += str(int(char) - 3)
+        if (int(char) < 3):
+            out += str((10 + int(char)) - 3)
+        else:
+            out += str(int(char) - 3)
     return out
 
 if __name__ == '__main__':
@@ -39,8 +42,8 @@ if __name__ == '__main__':
             print('Your password has been encoded and stored!')
 
         if selection == 2:
-            encrypted = decode(encrypted)
-            print(f'The encoded  password is {'partner function'}, and the original password is {encrypted}.')
+            decrypted = decode(encrypted)
+            print(f'The encoded  password is {decrypted}, and the original password is {encrypted}.')
 
         if selection == 3:
             break
